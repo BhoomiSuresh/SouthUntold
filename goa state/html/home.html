@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url("https://www.tripsavvy.com/thmb/VkL8HmumZQvMMF6zlkTYBR9Rlpg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/car-traveling-along-winding-road--maui--hawaii--america--usa-737142515-9d7096b173654472968075d805273c8f.jpg") no-repeat center center/cover;
+            color: white;
+        }
+
+        .header .title {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        .testimonials {
+            position: absolute;
+            bottom: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .testimonial {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonial h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .testimonial .stars {
+            color: #f4c542;
+            margin-bottom: 10px;
+        }
+
+        .testimonial p {
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .info-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .info-section img {
+            left:30%
+            width: 60%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .contact-info {
+            background-color: white;
+            padding: 60px;
+            font-size: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 60%;
+            border-radius: 5px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .card p {
+            font-size: 0.9em;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top:  20px;
+            font-size: 1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="title">OUR FAVOURITE TRAVELLERS</div>
+        <div class="testimonials">
+            <div class="testimonial">
+                <h3>Noah Schumacher</h3>
+                <div class="stars">★★★★★</div>
+                <p>Great service, very easy to use. Everything was handled and booked without me having to do much at all.</p>
+            </div>
+            <div class="testimonial">
+                <h3>Julia Patel</h3>
+                <div class="stars">★★★★★</div>
+                <p>Travel online was so easy! All necessary info was promptly sent via email.</p>
+            </div>
+            <div class="testimonial">
+                <h3>Natalia Lowe</h3>
+                <div class="stars">★★★★★</div>
+                <p>Transfers were simple, and used all vouchers. Great inclusions!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="section info-section">
+        <img src="https://media.assettype.com/outlooktraveller%2F2024-09-05%2Fdvtgxds3%2Fshutterstock_2459133885.jpg?w=1024&auto=format%2Ccompress&fit=max" alt="Beach Road">
+        <div class="contact-info">
+            <p><strong>Contact us:</strong><br>
+            080-9465-2346<br>
+            southuntold12@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="section">
+        <h2>WE’LL HANDLE YOUR TRIP FOR YOU</h2>
+        <div class="services">
+            <div class="card">
+                <img src="https://www.shutterstock.com/image-photo/white-modern-comfortable-tourist-bus-600nw-1654594828.jpg" alt="Transportation">
+                <h3>Transportation</h3>
+                <p>We’ll provide you transportation to all listed places. Just sit and relax.</p>
+            </div>
+            <div class="card">
+                <img src="https://imgmedia.lbb.in/media/2019/11/5dc11006081e600d47d8ae1b_1572933638601.png" alt="Tours & Activities">
+                <h3>Tours & Activities</h3>
+                <p>Get ready for adventurous activities. Embrace thrilling moments.</p>
+            </div>
+            <div class="card">
+                <img src="https://curlytales.com/wp-content/uploads/2017/07/Madras-Diaries.jpg" alt="Culinary Services">
+                <h3>Culinary Services</h3>
+                <p>Enjoy the best and famous foods of South India.</p>
+            </div>
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/9c/5a/da/the-baga-beach-resort.jpg?w=700&h=-1&s=1" alt="Hotel Bookings">
+                <h3>Hotel Bookings</h3>
+                <p>Don’t worry about last-minute hotel bookings. We’ve got you.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+              So, what are you waiting for? Click on your favorite state and get ready for the best trip of your life.
+    </div>
+</body>
+</html>
