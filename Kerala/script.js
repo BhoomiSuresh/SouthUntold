@@ -25,3 +25,8 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 3500); // Change image every 2 seconds
 }
+
+function storeContent(content){
+  localStorage.setItem('content',content);
+  window.location.href='booking.html';
+}
