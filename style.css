@@ -1,4 +1,4 @@
-@media(min-width: 768px){
+@media(max-width: 768px){
   .grid1{
     background-size: cover;
   }
@@ -38,7 +38,7 @@ a:hover{
     font-size: 200px;
     width: 80px;
     line-height: 140px;
-    padding-right: 30rem;
+    padding-right: 26vw;
 }
 
 .logo{
@@ -48,8 +48,8 @@ a:hover{
 #sub{
   color: rgb(234, 229, 223);
   font-family: "Fira Sans", sans-serif;
-  font-size: 2rem;
-  padding-top: 1rem;
+  font-size: 3vh;
+  padding-top: 1.5vh;
 }
 
 .grid2{
@@ -60,7 +60,7 @@ a:hover{
   height: 100vh;
 }
 .ka, .kl, .ga{
-  width: 30rem;
+  width: 50vh;
   height: auto;
 }
 
@@ -79,14 +79,14 @@ a:hover{
   font-family: "Fira Sans", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 100px;
-  line-height: 90px;
+  font-size: 10vw;
+  line-height: 9vw;
 }
 
 #whyus1{
   font-family: "Fira Sans", sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 12rem;
+  font-size: 1.3vw;
+  margin-bottom: 12vw;
 }
 
 /****** Bhoomika's code ******/
@@ -98,10 +98,10 @@ body {
 }
 
 .section {
-  max-width: 1200px;
+  max-width: 120vw;
   margin: 0 auto;
   text-align: center;
-  padding: 20px;
+  padding: 20vw;
 }
 
 .header {
@@ -114,42 +114,43 @@ body {
 
 .header .title {
   position: absolute;
-  padding-top: 20rem;
-  left: 50%;
+  padding-top: 40vh;
+  left: 50vw;
+  margin-bottom: 2vh;
   transform: translateX(-50%);
-  font-size: 4rem;
+  font-size: 3vw;
   font-weight: bold;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .testimonials {
   position: absolute;
-  bottom: 30%;
-  left: 50%;
+  bottom: 15vw;
+  left: 50vw;
   transform: translateX(-50%);
-  width: 60%;
+  width: 60vw;
   display: flex;
   justify-content: space-around;
-  gap: 20px;
+  gap: 2vw;
 }
 
 .testimonial {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 15px;
-  border-radius: 8px;
+  padding: 1.5vw;
+  border-radius: 0.5vw;
   color: white;
-  width: 30%;
+  width: 30vw;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .testimonial h3 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+  font-size: 1.2vw;
+  margin-bottom: 1vw;
 }
 
 .testimonial .stars {
   color: #f4c542;
-  margin-bottom: 10px;
+  margin-bottom: 1vw;
 }
 
 .testimonial p {
@@ -161,63 +162,71 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 20px 0;
-  margin-left: 16.5rem;
+  padding-bottom: 2vh;
+  margin-left: -14vw;
 }
 
 .info-section img {
-  left:30%;
-  width: 60%;
+  left:20vh;
+  width: 60vw;
   height: auto;
-  border-radius: 8px;
+  border-radius: 4vw;
 }
 
 .contact-info {
   background-color: white;
-  padding: 60px;
-  padding-left: 2rem;
-  font-size: 2rem;
-  border-radius: 8px;
+  padding: 6vw;
+  padding-left: 5vw;
+  font-size: 3vh;
+  border-radius: 2vw;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.section{
+  margin-top: -10vh;
+}
+
+.section h2{
+  font-size: 4vh;
+}
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: 22vw 22vw 22vw 22vw ;
+  column-gap: 0.5vw;
   text-align: center;
+  margin-left: -15vw;
 }
 
 .card {
   background: white;
   border-radius: 8px;
-  padding: 15px;
+  padding: 1vw;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
   width: 100%;
-  height: 60%;
+  height: 40vh;
   border-radius: 5px;
 }
 
 .card h3 {
-  margin: 10px 0;
-  font-size: 1.2em;
+  margin: 1vw 0;
+  font-size: 1.2vw;
 }
 
 .card p {
-  font-size: 0.9em;
+  font-size: 0.9vw;
 }
 
 .footer {
   text-align: center;
-  margin-top:  20px;
+  margin-top: 1vh;
   font-size: 1em;
   color: #555;
-  padding-bottom: 2rem;
+  margin-bottom: 1vh;
 }
 
 .section h2{
-  padding-bottom: 2rem;
+  padding-bottom: 3vh;
 }
