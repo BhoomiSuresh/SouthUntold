@@ -7,6 +7,14 @@
   body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+  .back{
+    transform: scale(0.15);
+    transform-origin: top;
+    padding-top: 15rem;
+    position: absolute; 
+    margin-left: -8%;
+    z-index: 15;
+  }
   
   .logo{
   transform: scale(0.5);
