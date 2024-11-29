@@ -114,7 +114,7 @@ body {
 
 .header .title {
   position: absolute;
-  padding-top: 40vh;
+  padding-top: 35vh;
   left: 50vw;
   margin-bottom: 2vh;
   transform: translateX(-50%);
