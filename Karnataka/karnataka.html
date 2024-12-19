@@ -8,9 +8,14 @@
   <title>Karnataka Carousel</title>
 </head>
 <body>
-  <a href="../index.html"><img src ="https://e7.pngegg.com/pngimages/227/848/png-clipart-arrow-computer-icons-encapsulated-postscript-button-back-icon-angle-logo-thumbnail.png"/></a>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" onclick="scrollToTop()">
+    <img src="../Pics/up-arrow_12292186.png" alt="Back to Top">
+  </button>
   <a href="../index.html">
   <img class="logo" src="./logo.png"></img></a>
+  <a href="../index.html"> <img class="back" src="../Pics/building_15219176.png"> </a>
   <h1>Karnataka</h1>
   <section class="carousel-container">
     <div class="carousel" id="carousel">
@@ -18,19 +23,19 @@
       <button class="carousel-button next" id="next">&#10095;</button>
       <ul class="carousel-slides">
         <li class="carousel-slide">
-          <img src="./Malpe-Beach.webp" alt="Malpe Beach">
+          <img src="https://static.toiimg.com/img/65246259/Master.jpg" alt="Malpe Beach">
         
         </li>
         <li class="carousel-slide">
-          <img src="./mysuru.jpg" alt="Mysuru Palace">
+          <img src="../Pics/mpalace.jpg" alt="Mysuru Palace">
           
         </li>
         <li class="carousel-slide">
-          <img src="./half moon.jpg" alt="Gokarna">
+          <img src="https://mysorewheels.com/wp-content/uploads/mysore-to-belur-halebidu-car-rental-mysore-wheels-jpg.webp" alt="Gokarna">
          
         </li>
         <li class="carousel-slide">
-          <img src="./hampi.jpg" alt="Hampi">
+          <img src="../Pics/hampi.jpg" alt="Hampi">
           
         </li>
       </ul>
@@ -103,7 +108,15 @@ All facilities, including housing and meals, will be fully provided with excepti
       </span>
     </div>
 
-
+    <script>
+      // Function to scroll to the top
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+    </script>
   <script src="java.js"></script>
 </body>
 </html>

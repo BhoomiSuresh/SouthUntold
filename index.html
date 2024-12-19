@@ -10,6 +10,11 @@
     <title>South Untold: Your travel partner</title>
 </head> 
 <body>
+      <!-- Back to Top Button -->
+      <button class="back-to-top" onclick="scrollToTop()">
+        <img src="./Pics/up-arrow_12292186.png" alt="Back to Top">
+      </button>
+    
 <div class="container"> 
         <div class="grid1">
            <img class="logo" src="./Pics/logo.png"/>
@@ -20,10 +25,8 @@
         <div class="grid2">
             <a href="./Karnataka/karnataka.html"><img class="ka" src="./Pics/Karnataka.jpg"/></a>
             <a href="./Kerala/kerala.html"><img class="kl" src="./Pics/Kerala.jpg"/></a> 
-            <a href="./goa state/html/goa.html"><img class="ga" src="./Pics/goa1.jpg"/></a>     
+            <a href="./goa state/html/goa2.html"><img class="ga" src="./Pics/goa1.jpg"/></a>     
         </div>
- 
-        <a href=""> <img class="back" src="../Pics/left-arrow_10023689.png"/> </a>
 
         <div class="grid4"> 
             <p id="whyus">Why Us?</p>
@@ -99,7 +102,15 @@
     <div class="footer">
               So, what are you waiting for? Click on your favorite state and get ready for the best trip of your life!
     </div>
-
 </div>
+<script>
+    // Function to scroll to the top
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
 </body>
 </html>

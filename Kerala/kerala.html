@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" onclick="scrollToTop()">
+    <img src="../Pics/up-arrow_12292186.png" alt="Back to Top">
+  </button>
   <a href="../index.html"> <img class="logo" src="./Pics/logo.png"> </a> 
+  <a href="../index.html"> <img class="back" src="../Pics/building_15219176.png"> </a>
   <h2>Kerala</h2>
 <!-- Slideshow container -->
 <div class="slideshow-container">
@@ -124,5 +129,14 @@
 
   <script src="script.js"></script>
   <script src="../../Karnataka/java.js"></script>
+  <script>
+    // Function to scroll to the top
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
 </body>
 </html>

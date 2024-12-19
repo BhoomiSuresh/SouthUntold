@@ -1,218 +1,211 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  .back{
-    transform: scale(0.15);
-    transform-origin: top;
-    padding-top: 15rem;
-    position: absolute; 
-    margin-left: -8%;
-    z-index: 15;
-  }
-  
-  .logo{
-  transform: scale(0.5);
-  transform-origin: top;
-  padding-top: 2rem;
-  position: absolute;
-  padding-left: 45%;
-  z-index: 10;
-  text-align: center;
 
-  }
-  .carousel-container {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-  }
- 
-  .carousel-slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out; 
-    list-style: none;
-    padding: 0;
-  }
-  
-  .carousel-slide {
-    flex: 0 0 100%;
-    position: relative;
-  }
-  
-  .carousel-slide img {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    display: block;
-  }
-  
-  h1 {
-    position: absolute;
-    padding-left: 0rem;
-    z-index: 10;
-    padding-top: 20rem;
-    color: #ffe4c4;
-    font-size: 12rem; 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-   
-  }
-  
-  .carousel-button {
-    position: absolute;
-    top: 30%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
+* {box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  z-index: 0;/* Style for the button container */
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+
     cursor: pointer;
-    font-size: 2rem;
-    z-index: 10;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
- 
-  @media (max-width: 768px) {
-    .carousel-container {
-      width: 90%;
-    }
-  
-    .overlay {
-      font-size: 2rem; 
-    }
+    background-color: transparent;
+    border: none;
   }
 
-  .section{
-    background-color: cyan;
-   margin-top: -20%;
-  }
-
-  .head{
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 3%;
-    margin-top: 3%;
-  }
-
-  .img_deg{
-    float: right;
-    width: 25%;
-    height: auto;
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
-  
-  .pos_cen{
-    position: absolute;
+  /* Image styles */
+  .back-to-top img {
     width: 100%;
-    background-color: none;
-    padding: 30px;
+    height: 100%;
+    object-fit: cover;
   }
 
-  .head p{
-    width: 100px;
-    padding-right: 2rem;
+  /* Add hover effect for better visibility */
+  .back-to-top:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
   }
 
-  .container{
-    background-color: #8A9A6F;
-    margin-top: 40%;
-  }
-  .container_innerpath{
-    display: flex;
-    align-items: center;
-    justify-content:space-evenly;
-    margin-left: 52px;
-    margin-top: 50px;
-    
-  }
-
-  .heading{
-   color: antiquewhite;
-    font-size:50px;
-    font-weight: bold;
-    padding-left: 41rem;
-    padding-top: 40px;
-  }
-  
-.deals {
-  
-  height: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 500px; 
-  
 }
-
-.image img {
-  width: 500px; 
-  height: 400px;
-  cursor: pointer;
-}
-
-.content1 {
-  text-align: left;
-  font-size: larger;
-  background-color: #E4C086;
-  width: 500px;
-  height: 150px;
- margin-top: -.9%;
-}
-
-.content1 p{
-  width: 500px;
-  padding: 2rem;
+.logo{
+  width: 15rem;
+  height: auto;
   padding-top: 1rem;
+  position: absolute;
+  padding-right: 2rem;
+  z-index: 15;
 }
 
-.desc{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+.back{
+  width: 5rem;
+  height: auto;
+  padding-top: 4rem;
+  position: absolute;
+  margin-left: 104rem;
+  z-index: 15;
+  }
+
+h2{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 20rem;
+color: #ffe4c4;
+position: absolute;
+padding-top: 18rem;
+padding-left: 0rem;
+z-index: 10;
+/*transform: rotate(-90deg);*/
 }
 
-.content{
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  max-width: 100vmax;
-  margin: 0rem 5rem;
+/* Slideshow container */
+.slideshow-container{
+position: relative;
+margin: auto;
+}
+
+.dot {
+height: 5px;
+width: 5px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+/* Hide the images by default */
+.mySlides {
+display: none;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade {
+animation-name: fade;
+animation-duration: 2s;
+}
+
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+.scroll2{
+display: grid;
+grid-template-columns: 60% 40%;
+}
+.scroll2 span{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 3rem;
+color: black;
+position: absolute;
+padding-top: -2rem;
+padding-left: 0rem;
+font-weight: bold;  
+}
+.expkl{
+width: 800px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding-top: 7.5rem;
+font-size: 1.25rem;
+padding-left: 5rem;
+line-height: 2rem;
+}
+
+.img_deg{
+width: 50vh;
+height: auto;
+padding-top: 7rem;
+}
+
+.scroll3{
+margin-top: 10rem;
+background-color: #8A9A6F;
+padding-top: 5rem;
+padding-bottom: 5rem;
+}
+
+.scroll3 h3{
+font-size: 4rem;
+text-align: center;
+padding-bottom: 5rem;
+color: #ffffff;
+}
+
+.one{
+transform: rotate(-90deg);
+margin-left: 15rem;
+margin-top: 4rem;
+}
+
+.two{
+transform: rotate(90deg);
+margin-left: 37rem;
+margin-bottom: 24rem;
+}
+
+.card1{
+display: grid;
+margin-left: -2rem;
+grid-template-columns: 2% 60%;
+}
+
+.box1{
+width: 40rem;
+height: 40rem;
+background-color: #E4C086;
+}
+
+.box1 p{
+font-size: 1.25rem;
+padding: 2rem;
+width: 40rem;
+text-align: center;
+}
+
+.box1 img{
+width: 40rem;
+height: auto;
+}
+
+.cards{
+display: grid;
+padding-left: 15rem;
+grid-template-columns: 45% 60%;
 }
 
 .desc1{
-  padding: 5rem;
-  display: flex;
-  flex-flow: row;
+padding: 5rem;
+display: flex;
+flex-flow: row;
 }
 .desc1 h3{
-  color: black;
-  font-size: 2.5rem;
-  width: 400px;
+color: black;
+font-size: 2.5rem;
+width: 400px;
 }
 .desc1 p{
-  width:60%;
-  font-size: 1.1rem;
-  padding: 3rem;
-  background-color: #fbf7df;
-  border-radius: 1em;
-  line-height: 1.7rem;
+width:60%;
+font-size: 1.1rem;
+padding: 3rem;
+background-color: #fbf7df;
+border-radius: 1em;
+line-height: 1.7rem;
 }
 
 #Route p{
-  background-color: rgb(14, 95, 73);
-  color: #fbf7df;
+
+background-color: rgb(14, 95, 73);
+color: #fbf7df;
 }
+

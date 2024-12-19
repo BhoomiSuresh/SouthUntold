@@ -1,64 +1,30 @@
-let currentSlideIndex = 0;
-const slides = document.querySelectorAll('.carousel-slide');
-const totalSlides = slides.length;
-const carouselSlides = document.querySelector('.carousel-slides');
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
+let slideIndex = 0;
+showSlides();
 
-const firstSlideClone = slides[0].cloneNode(true);
-carouselSlides.appendChild(firstSlideClone);
-
-function goToNextSlide() {
-  if (currentSlideIndex === totalSlides - 1) {
-    carouselSlides.style.transition = 'none';
-    currentSlideIndex = 0; 
-    updateCarousel();
-     
-    setTimeout(() => {
-      carouselSlides.style.transition = 'transform 0.5s ease-in-out';
-    }, 50);
-  } else {
-    currentSlideIndex++;
-    updateCarousel();
+function showSlides() {
+  let i; 
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  let h2 = document.querySelector("h2");
+  if(slideIndex==0){
+    h2.innerText = "Goa";
+    h2.style.color = "#ffe4c4";
   }
-}
-
-function goToPrevSlide() {
-  if (currentSlideIndex === 0) {
-    carouselSlides.style.transition = 'none';
-    currentSlideIndex = totalSlides - 1; 
-    updateCarousel();
-    
-    setTimeout(() => {
-      carouselSlides.style.transition = 'transform 0.5s ease-in-out';
-    }, 50);
-  } else {
-    currentSlideIndex--;
-    updateCarousel();
+  else{
+    h2.innerText = "";
   }
-}
-
-function updateCarousel() {
-  carouselSlides.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
-
-  
-  let h1 = document.querySelector("h1");
-  
-  if (currentSlideIndex == 0) {
-    h1.innerText = "Goa";
-    h1.style.color = "#ffe4c4";  
-  } else {
-    h1.innerText = "";
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
   }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1};   
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3500); // Change image every 2 seconds
 }
-
-// Event listeners for navigation buttons
-nextButton.addEventListener('click', goToNextSlide);
-prevButton.addEventListener('click', goToPrevSlide);
-
-// Automatically move to next slide every 5 seconds
-setInterval(goToNextSlide, 5000);
-
 
 function storeContent(content){
   localStorage.setItem('content',content);

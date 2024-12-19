@@ -136,18 +136,55 @@ body {
     </div>
 
     <script>
-        function reserve() {
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
-            if (name && phone && email) {
-                window.location.href='thankyou.html';
+       function reserve() {
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const numTravelers = document.getElementById('numTravelers').value;
+    const date = document.getElementById('date').value;
+
+    // Validate that all fields are filled out
+    if (name && phone && email && numTravelers && date) {
+        // Prepare the reservation data
+        const reservationData = {
+            name: name,
+            phone: phone,
+            email: email,
+            numTravelers: numTravelers,
+            date: date
+        };
+
+        // Send data to the backend using fetch API
+        fetch('http://your-backend-api-url/api/reservation', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(reservationData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Check if reservation was successful
+            if (data.message === 'Reservation successful') {
+                // Redirect to thank you page
+                window.location.href = 'thankyou.html';
             } else {
-                alert("Please fill in all the fields.");
+                // Show error message if reservation fails
+                alert('There was an issue with your reservation. Please try again.');
             }
-        }
-    
-        document.getElementById('content').innerText=localStorage.getItem('content')||'no';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error sending reservation request. Please try again.');
+        });
+    } else {
+        alert("Please fill in all the fields.");
+    }
+}
+
+// This will display content stored in localStorage if needed
+document.getElementById('content').innerText = localStorage.getItem('content') || 'no';
+
     </script>
 </body>
 </html>
